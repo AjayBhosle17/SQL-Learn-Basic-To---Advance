@@ -12,7 +12,7 @@ backup database Ajay2024 to disk = 'D:\Coding2\Ajay V#\SQL.bak'
 
 --differential backup   (repeat user)
 
-backup database Ajay2024 to disk = 'D:\Coding2\Ajay V#\SQL.bak'
+backup database Ajay2024 to disk = 'D:\Coding2\Ajay V#\SQL.bak'with differential
 
 --restore
 
