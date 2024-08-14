@@ -222,11 +222,11 @@ alter table student alter column name varchar(20) not null
 
 alter table Student add constraint forign_key  foreign key(trainerId) references Trainer(id)
 
-
-
 create table paidfees(
 
 	fees int,
 	name varchar(20),
 	id int foreign key references Student(RollNO)
 )
+
+drop table paidfees
