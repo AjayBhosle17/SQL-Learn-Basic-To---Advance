@@ -198,3 +198,5 @@ select RollNo,name,Gender,mail,null as mono from  CS_Student
 
 
 
+
+
