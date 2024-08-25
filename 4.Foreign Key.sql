@@ -72,9 +72,9 @@ insert into Trainer values(4,'Malhari','Male',5)
 insert into student values(17,'Ajay','Male',1),(20,'Krishna','Male',2)
 ,(36,'Vijay','Female',3)
 
-insert into student values(54,'vivek','Male',2) 
+insert into student(RollNo,name,gender) values(54,'vivek','Male') 
 
-insert into student values(11,'Zahid','Male',1) 
+insert into student values(11,'Zahid','Male',null) 
 
 select *from Trainer
 select * from student
