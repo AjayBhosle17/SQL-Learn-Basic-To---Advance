@@ -38,3 +38,35 @@ as
 	select * from EMployee
 
 select * from Emp1
+
+
+
+
+declare @student1 table(
+
+	id int,
+	name varchar(20)
+)
+
+select * from @student1
+
+insert into @student1 
+ select id,name from EMploee
+
+select * from @student1
+
+drop table EMploee
+
+create table EMploee(
+
+id int,
+name varchar(20)
+)
+
+insert into Emploee values(1,'Ajay')
+
+select * from EMploee
+
+select * into Ab from EMploee where 1<>1
+
+select * from Ab
