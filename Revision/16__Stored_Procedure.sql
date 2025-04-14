@@ -66,4 +66,48 @@ exec uspRegister @name='Ajay' ,@mobile=1111111111 , @city='pune',@status=@result
 print @result
 
 
+-- update
 
+alter proc uspUpdateUser
+	@mobile BIGINT = NULL, 
+	@name varchar(10) = 'Ajay' ,
+	@city varchar(10)=null
+as
+begin
+	
+	if(exists(select * from Users where mobile=@mobile))
+	begin
+		update Users set name=@name, city=@city where mobile=@mobile
+	end 
+	else
+	begin
+		print 'User does not exists plz try again'
+	end
+end
+
+EXEC uspUpdateUser @mobile = 1111111111, @name = 'Mayur', @city = 'Ambajogai';
+select * from Users
+
+
+-- delete
+
+create proc uspdelete
+@mobile varchar(10)
+as
+begin
+
+	if(exists (select * from Users where mobile=@mobile))
+	begin
+		delete from Users where mobile=@mobile
+		print 'delete Successfully'
+	end
+	else
+	begin
+		print 'user does not exists'
+	end
+
+end
+
+exec uspdelete 1111111111
+
+select * from Users
